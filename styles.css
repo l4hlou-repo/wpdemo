@@ -114,3 +114,23 @@ footer {
 .header-menu .menu a:hover {
     color: #293845;
 }
+/* Add this to your styles.css */
+
+/* Adjust the header background color and text color */
+header {
+    background-color: #f8f9fa; /* Light gray background */
+    color: #333; /* Dark text color */
+}
+
+/* Adjust the jumbotron text color */
+.jumbotron {
+    background-color: #f8f9fa; /* Light gray background */
+    color: #333; /* Dark text color */
+}
+
+/* Adjust the footer background color and text color */
+footer {
+    background-color: #f8f9fa; /* Light gray background */
+    color: #333; /* Dark text color */
+}
+
