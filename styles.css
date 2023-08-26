@@ -1,7 +1,7 @@
 /* Your CSS styles here */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    margin: auto;
     padding: 0;
     background-color: #f8f8f8;
 }
@@ -15,7 +15,7 @@ header {
 
 .container {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 1em;
     background-color: #fff;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -69,6 +69,7 @@ button:hover {
 footer {
     background-color: #f0f0f0;
     padding: 1em 0;
+    margin: 20px;
 }
 
 .footer-content {
@@ -86,5 +87,30 @@ footer {
 }
 
 .footer-links a:hover {
+    color: #293845;
+}
+.header-menu {
+    text-align: center;
+    padding: 0.5em 0;
+}
+
+.header-menu .menu {
+    list-style: none;
+    padding: 0;
+}
+
+.header-menu .menu li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.header-menu .menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.header-menu .menu a:hover {
     color: #293845;
 }
