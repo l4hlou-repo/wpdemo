@@ -157,3 +157,9 @@ footer {
     background-color: #f8f9fa; /* Light gray background */
     color: #333; /* Dark text color */
 }
+
+/* Example media query for smaller screens */
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+}
+
