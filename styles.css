@@ -105,7 +105,7 @@ footer {
 }
 
 .header-menu .menu a {
-    color: #ffffff;
+    color: #292929;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
@@ -133,4 +133,27 @@ footer {
     background-color: #f8f9fa; /* Light gray background */
     color: #333; /* Dark text color */
 }
+/* Add this to your styles.css */
 
+/* Set the header background color and text color */
+header {
+    background-color: #f8f9fa; /* Light gray background */
+    color: #333; /* Dark text color */
+}
+
+/* Set the navbar menu item text color */
+.navbar-nav .nav-link {
+    color: #333 !important; /* Dark text color */
+}
+
+/* Set the jumbotron text color */
+.jumbotron {
+    background-color: #f8f9fa; /* Light gray background */
+    color: #333; /* Dark text color */
+}
+
+/* Set the footer background color and text color */
+footer {
+    background-color: #f8f9fa; /* Light gray background */
+    color: #333; /* Dark text color */
+}
