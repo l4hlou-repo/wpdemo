@@ -66,3 +66,25 @@ button:hover {
 #macronutrientList li {
     margin-bottom: 0.5em;
 }
+footer {
+    background-color: #f0f0f0;
+    padding: 1em 0;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-links a {
+    color: #35495e;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #293845;
+}
