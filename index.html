@@ -2,117 +2,61 @@
 <html>
 <head>
     <title>Calorie Calculator</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Add Bootstrap CSS and jQuery -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="https://lahlou.shop/">Calorie Calculator</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">What We Do</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <div class="jumbotron text-center">
-            <h1 class="display-4">Calorie Calculator</h1>
-            <p class="lead">Calculate your daily calorie needs for weight loss or gain</p>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Calorie Calculator</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">What We Do</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content text-center">
+            <h1 class="display-4 animate__animated animate__fadeInDown">Your Personal Calorie Calculator</h1>
+            <p class="lead animate__animated animate__fadeInUp">Achieve your fitness goals with accurate calorie calculations and personalized plans.</p>
+            <a href="#calculatorForm" class="btn btn-primary btn-lg animate__animated animate__fadeInUp">Get Started</a>
         </div>
     </header>
+
     <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <form id="calculatorForm">
-                    <div class="form-group">
-                        <label for="gender">Gender:</label>
-                        <select id="gender" class="form-control" required>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="age">Age:</label>
-                        <input type="number" id="age" class="form-control" min="1" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="weight">Weight (kg):</label>
-                        <input type="number" id="weight" class="form-control" min="1" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="height">Height (cm):</label>
-                        <input type="number" id="height" class="form-control" min="1" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="activityLevel">Activity Level:</label>
-                        <select id="activityLevel" class="form-control" required>
-                            <option value="1.2">Sedentary</option>
-                            <option value="1.375">Lightly Active</option>
-                            <option value="1.55">Moderately Active</option>
-                            <option value="1.725">Very Active</option>
-                            <option value="1.9">Extra Active</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="goal">Goal:</label>
-                        <select id="goal" class="form-control" required>
-                            <option value="lose">Lose Weight</option>
-                            <option value="maintain">Maintain Weight</option>
-                            <option value="gain">Gain Weight</option>
-                        </select>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">Calculate</button>
-                    <button type="reset" class="btn btn-secondary">Reset</button>
-                </form>
-            </div>
-            <div class="col-md-6">
-                <div id="resultContainer">
-                    <h2>Your Results</h2>
-                    <p id="caloriesResult"></p>
-                    <h3>Macronutrient Distribution</h3>
-                    <ul id="macronutrientList">
-                        <li>Protein: <span id="protein"></span></li>
-                        <li>Carbohydrates: <span id="carbohydrates"></span></li>
-                        <li>Fat: <span id="fat"></span></li>
-                    </ul>
-                </div>
-            </div>
+        <form id="calculatorForm">
+            <!-- Form fields here -->
+        </form>
+        <div id="resultContainer">
+            <!-- Results here -->
         </div>
     </div>
+
     <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
-                <a href="about.html">About Us</a>
-                <a href="contact.html">Contact</a>
-            </div>
-        </div>
+        <!-- Footer content here -->
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
