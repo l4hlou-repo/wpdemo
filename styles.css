@@ -1,24 +1,17 @@
 /* Your CSS styles here */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    margin: auto;
     padding: 0;
     background-color: #f8f8f8;
 }
 
-/* Header styles */
-.navbar {
-    margin-bottom: 0;
-}
-
-/* Hero section styles */
 .hero {
     position: relative;
-    height: 100vh;
-    background-image: url('https://images.unsplash.com/photo-1611077544775-6e72542a206f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1989&q=80');
-    background-size: cover;
-    background-position: center;
+    background: url('background-image.jpg') center/cover no-repeat;
     color: #fff;
+    text-align: center;
+    padding: 10% 0;
 }
 
 .overlay {
@@ -27,42 +20,77 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
 }
 
 .hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-/* Form and result container styles */
-.container {
-    padding: 2em;
-    background-color: #fff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    margin-top: -5em;
-    position: relative;
     z-index: 1;
 }
 
-/* Footer styles */
-footer {
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 1em;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: grid;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+label {
+    font-weight: bold;
+}
+
+select, input[type="number"] {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #35495e;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #293845;
+}
+
+#resultContainer {
+    background-color: #f0f0f0;
+    padding: 1em;
+    border-radius: 4px;
+}
+
+#macronutrientList {
+    list-style: none;
+    padding-left: 0;
+}
+
+#macronutrientList li {
+    margin-bottom: 0.5em;
+}
+
+.footer {
     background-color: #f8f9fa;
     padding: 1em 0;
+    color: #333;
     text-align: center;
 }
 
-.footer-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
 .footer-links a {
-    color: #333;
+    color: #35495e;
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
@@ -71,26 +99,4 @@ footer {
 
 .footer-links a:hover {
     color: #293845;
-}
-
-/* Hero animation styles */
-.animate__animated {
-    animation-duration: 1s;
-}
-
-.animate__fadeInDown {
-    animation-name: fadeInDown;
-}
-
-.animate__fadeInUp {
-    animation-name: fadeInUp;
-}
-
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-    .container {
-        margin-top: 0;
-    }
-
-    /* Adjust other styles as needed */
 }
