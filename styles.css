@@ -1,85 +1,68 @@
 /* Your CSS styles here */
 body {
     font-family: Arial, sans-serif;
-    margin: auto;
+    margin: 0;
     padding: 0;
     background-color: #f8f8f8;
 }
 
-header {
-    background-color: #125eb0;
-    color: white;
-    text-align: center;
-    padding: 1em;
+/* Header styles */
+.navbar {
+    margin-bottom: 0;
 }
 
+/* Hero section styles */
+.hero {
+    position: relative;
+    height: 100vh;
+    background-image: url('path-to-your-hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* Form and result container styles */
 .container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 1em;
+    padding: 2em;
     background-color: #fff;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: -5em;
+    position: relative;
+    z-index: 1;
 }
 
-form {
-    display: grid;
-    gap: 1em;
-    margin-bottom: 1em;
-}
-
-label {
-    font-weight: bold;
-}
-
-select, input[type="number"] {
-    width: 100%;
-    padding: 0.5em;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    background-color: #35495e;
-    color: white;
-    border: none;
-    padding: 0.5em 1em;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #293845;
-}
-
-#resultContainer {
-    background-color: #f0f0f0;
-    padding: 1em;
-    border-radius: 4px;
-}
-
-#macronutrientList {
-    list-style: none;
-    padding-left: 0;
-}
-
-#macronutrientList li {
-    margin-bottom: 0.5em;
-}
+/* Footer styles */
 footer {
-    background-color: #f0f0f0;
+    background-color: #f8f9fa;
     padding: 1em 0;
-    margin: 20px;
+    text-align: center;
 }
 
 .footer-content {
     max-width: 800px;
     margin: 0 auto;
-    text-align: center;
 }
 
 .footer-links a {
-    color: #35495e;
+    color: #333;
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
@@ -89,77 +72,25 @@ footer {
 .footer-links a:hover {
     color: #293845;
 }
-.header-menu {
-    text-align: center;
-    padding: 0.5em 0;
+
+/* Hero animation styles */
+.animate__animated {
+    animation-duration: 1s;
 }
 
-.header-menu .menu {
-    list-style: none;
-    padding: 0;
+.animate__fadeInDown {
+    animation-name: fadeInDown;
 }
 
-.header-menu .menu li {
-    display: inline-block;
-    margin: 0 15px;
+.animate__fadeInUp {
+    animation-name: fadeInUp;
 }
 
-.header-menu .menu a {
-    color: #292929;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.header-menu .menu a:hover {
-    color: #293845;
-}
-/* Add this to your styles.css */
-
-/* Adjust the header background color and text color */
-header {
-    background-color: #f8f9fa; /* Light gray background */
-    color: #333; /* Dark text color */
-}
-
-/* Adjust the jumbotron text color */
-.jumbotron {
-    background-color: #9EB384 /* Light gray background */
-    color: #333; /* Dark text color */
-}
-
-/* Adjust the footer background color and text color */
-footer {
-    background-color: #f8f9fa; /* Light gray background */
-    color: #333; /* Dark text color */
-}
-/* Add this to your styles.css */
-
-/* Set the header background color and text color */
-header {
-    background-color: #f8f9fa; /* Light gray background */
-    color: #333; /* Dark text color */
-}
-
-/* Set the navbar menu item text color */
-.navbar-nav .nav-link {
-    color: #333 !important; /* Dark text color */
-}
-
-/* Set the jumbotron text color */
-.jumbotron {
-    background-color: #f8f9fa; /* Light gray background */
-    color: #333; /* Dark text color */
-}
-
-/* Set the footer background color and text color */
-footer {
-    background-color: #f8f9fa; /* Light gray background */
-    color: #333; /* Dark text color */
-}
-
-/* Example media query for smaller screens */
+/* Media queries for responsiveness */
 @media (max-width: 768px) {
-    /* Adjust styles for smaller screens */
-}
+    .container {
+        margin-top: 0;
+    }
 
+    /* Adjust other styles as needed */
+}
