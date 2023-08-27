@@ -1,129 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6169558603159954"
-     crossorigin="anonymous"></script>
-    <title>Calorie Calculator</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!-- Add Bootstrap CSS and jQuery -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6169558603159954"
+crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="styles.css" rel="stylesheet">
+  <title>Calories Calculator</title>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">Calorie Calculator</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">What We Do</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <header class="hero">
-        <div class="overlay"></div>
-        <div class="hero-content text-center">
-            <h1 class="display-4 animate__animated animate__fadeInDown">Your Personal Calorie Calculator</h1>
-            <p class="lead animate__animated animate__fadeInUp">Achieve your fitness goals with accurate calorie calculations and personalized plans.</p>
-            <a href="#calculatorForm" class="btn btn-primary btn-lg animate__animated animate__fadeInUp">Get Started</a>
-        </div>
-    </header>
-
-    <div class="container">
-        <form id="calculatorForm">
-            <div class="form-row">
-                <div class="col-md-6">
-                    <label for="gender">Gender:</label>
-                    <select id="gender" class="form-control" required>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                    </select>
-                </div>
-                <div class="col-md-6">
-                    <label for="age">Age:</label>
-                    <input type="number" id="age" class="form-control" min="1" required>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="col-md-6">
-                    <label for="weight">Weight (kg):</label>
-                    <input type="number" id="weight" class="form-control" min="1" required>
-                </div>
-                <div class="col-md-6">
-                    <label for="height">Height (cm):</label>
-                    <input type="number" id="height" class="form-control" min="1" required>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="col-md-6">
-                    <label for="activityLevel">Activity Level:</label>
-                    <select id="activityLevel" class="form-control" required>
-                        <option value="1.2">Sedentary</option>
-                        <option value="1.375">Lightly Active</option>
-                        <option value="1.55">Moderately Active</option>
-                        <option value="1.725">Very Active</option>
-                        <option value="1.9">Extra Active</option>
-                    </select>
-                </div>
-                <div class="col-md-6">
-                    <label for="goal">Goal:</label>
-                    <select id="goal" class="form-control" required>
-                        <option value="lose">Lose Weight</option>
-                        <option value="maintain">Maintain Weight</option>
-                        <option value="gain">Gain Weight</option>
-                    </select>
-                </div>
-            </div>
-            <div class="text-center mt-3">
-                <button type="submit" class="btn btn-primary">Calculate</button>
-                <button type="reset" class="btn btn-secondary">Reset</button>
-            </div>
-        </form>
-      
-        <div id="resultContainer" class="mt-5">
-            <h2 class="mb-4 animate__animated animate__fadeInDown">Your Results</h2>
-            <p id="caloriesResult"></p>
-            <h3 class="animate__animated animate__fadeInUp">Macronutrient Distribution</h3>
-            <ul id="macronutrientList">
-                <li>Protein: <span id="protein"></span></li>
-                <li>Carbohydrates: <span id="carbohydrates"></span></li>
-                <li>Fat: <span id="fat"></span></li>
-            </ul>
-        </div>
-        
-    </div>
-<br>
-    <br>
-    <center>
-         <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
-                <a href="about.html">About Us</a>
-                <a href="contact.html">Contact</a>
-            </div>
-        </div>
-    </footer>
-    </center>
+<body class="bg-gray-100">
     
-    <script src="script.js"></script>
+  <div class="flex items-center justify-center min-h-screen">
+    <div class="login-box">
+      <h2 class="text-white">Calories Calculator</h2>
+      <form>
+        <div class="user-box">
+          <input type="number" name="weight" required>
+          <label>Weight (kg)</label>
+        </div>
+        <div class="user-box">
+          <input type="number" name="height" required>
+          <label>Height (cm)</label>
+        </div>
+        <div class="user-box">
+          <input type="number" name="age" required>
+          <label>Age</label>
+        </div>
+        <div class="user-box">
+            <select name="gender" required>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+
+          <div class="user-box">
+           
+            <select name="activity" required>
+              <option value="1.2">Sedentary (little or no exercise)</option>
+              <option value="1.375">Lightly active (light exercise/sports 1-3 days/week)</option>
+              <option value="1.55">Moderately active (moderate exercise/sports 3-5 days/week)</option>
+              <option value="1.725">Very active (hard exercise/sports 6-7 days a week)</option>
+              <option value="1.9">Super active (very hard exercise/sports, physical job, or training)</option>
+            </select>
+          </div>
+        <center>
+          <a href="#" class="btn-primary">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Calculate
+          </a>
+        </center>
+      </form>
+    </div>
+  </div>
+  <footer class="text-center py-4 bg-gray-800 text-white mt-10">
+    <div class="container mx-auto">
+        <a href="privacy.html" class="mr-4">Privacy</a>
+        <a href="terms.html" class="mr-4">Terms</a>
+        <a href="about.html" class="mr-4">About Us</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
